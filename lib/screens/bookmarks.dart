@@ -10,14 +10,14 @@ class BookmarksPage extends StatefulWidget {
 }
 
 class _BookmarksPageState extends State<BookmarksPage> {
-  List<String> trackNames = [];
+  List<List<String>> trackNames = [];
   bool _isLoaded = false;
 
   getPrefsKeys() async {
     SharedPreferences _prefs = await SharedPreferences.getInstance();
     Set<String> keys = _prefs.getKeys();
     for (String key in keys) {
-      trackNames.add(_prefs.get(key));
+      trackNames.add([_prefs.get(key), key]);
     }
     setState(() {
       _isLoaded = true;
@@ -66,7 +66,7 @@ class _BookmarksPageState extends State<BookmarksPage> {
                   itemBuilder: (context, index) {
                     return ListTile(
                       title: Text(
-                        trackNames[index],
+                        trackNames[index][0],
                         style: kBold,
                       ),
                       onTap: () {
@@ -74,7 +74,8 @@ class _BookmarksPageState extends State<BookmarksPage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => InfoPage(
-                              trackName: trackNames[index],
+                              trackName: trackNames[index][0],
+                              trackId: trackNames[index][1],
                             ),
                           ),
                         );
