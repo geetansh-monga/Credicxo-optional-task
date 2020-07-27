@@ -36,7 +36,10 @@ class _HomeState extends State<Home> {
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.book),
+        child: Icon(
+          Icons.book,
+          size: 40,
+        ),
         onPressed: () {
           Navigator.pushNamed(context, 'BookmarksPage');
         },
