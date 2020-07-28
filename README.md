@@ -9,11 +9,9 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 
 # Features
 
-* Fetches trending tracks from Musixmatch REST API.
-* Offline Booksmarks which store in device's local storage.
+* Fetches trending tracks, details and lyrics from Musixmatch REST API.
+* User can add booksmarks to save their favourite song which also works offline.
 * Realtime checking of internet connectivity.
-
-
 
 # Screenshots
 
