@@ -7,8 +7,13 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 
 **API used**: Musixmatch Developer API
 
+
+# Applicant Bio
 **Name**: Geetansh Monga
+
 **Applied on**: Internshala
-**Task Recived in**: Internshala
+
+**Task Recived on**: Internshala
+
 **Location**: Delhi
 
