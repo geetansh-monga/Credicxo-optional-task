@@ -1,5 +1,5 @@
 import 'package:credicxo_task/models/trendingtracks.dart';
-import 'package:credicxo_task/networking/repository.dart';
+import 'package:credicxo_task/networking/repositories.dart';
 import 'package:rxdart/rxdart.dart';
 
 //Bloc class for Trending Tracks.

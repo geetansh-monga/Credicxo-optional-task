@@ -3,12 +3,14 @@ import 'package:credicxo_task/models/trendingtracks.dart';
 import 'package:credicxo_task/models/trackLyrics.dart';
 import 'package:credicxo_task/networking/networking.dart';
 
+// Class for repository  of Trending tracks.
 class TrendingRepository {
   final NetworkingHelper _helper = NetworkingHelper();
 
   Future<TrendingTracks> fetchTrendingTracks() => _helper.fetchTrendingTracks();
 }
 
+// Class for repository  of Track Details.
 class TrackDetailsRepository {
   final NetworkingHelper _helper = NetworkingHelper();
 
@@ -16,6 +18,7 @@ class TrackDetailsRepository {
       _helper.fetchTrackDetails(trackId);
 }
 
+// Class for repository  of Track Lyrics.
 class TrackLyricsRepository {
   final NetworkingHelper _helper = NetworkingHelper();
 

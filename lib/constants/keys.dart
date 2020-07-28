@@ -1,1 +1,1 @@
-const kApiKey = 'c512ba56cb2f765727cf70ef692d0044';
+const kApiKey = '8c27a346480b0c499c93a669ab442605';
