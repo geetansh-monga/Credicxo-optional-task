@@ -10,7 +10,7 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 # Screenshots
 
 <p>
-<img src="https://user-images.githubusercontent.com/35039342/55468409-ef956b80-5620-11e9-9906-7e8ca89b4b49.png" alt="feed example" width = "400" >
+<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/Screenshots/Screenshot_20200728-121551.jpg" alt="feed example" width = "400" >
 <img src="https://user-images.githubusercontent.com/35039342/55468436-fa500080-5620-11e9-8475-28f291c4b1f6.png" alt="upload photo example"width = "400" >
 <img src="https://user-images.githubusercontent.com/35039342/55468489-1a7fbf80-5621-11e9-81d5-66d0535e0cde.png" alt="go to a profile from feed" width = "400">
 <img src="https://user-images.githubusercontent.com/35039342/55468561-4a2ec780-5621-11e9-806c-69861f6bee32.png" alt="edit profile example" width = "400" >
