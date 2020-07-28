@@ -7,6 +7,9 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 
 **API used**: Musixmatch Developer API
 
+# Screenshots
+![Screenshot 1](/screenshots/Screenshot_20200728-121949.jpg)
+Format: ![Alt Text](url)
 
 # Applicant Bio
 **Name**: Geetansh Monga
