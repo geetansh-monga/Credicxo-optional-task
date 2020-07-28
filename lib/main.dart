@@ -12,7 +12,7 @@ class CredicxoTask extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
+        '/': (context) => Home(), // Trending tracks list.
         'BookmarksPage': (context) => BookmarksPage(),
       },
     );

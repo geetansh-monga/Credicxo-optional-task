@@ -2,7 +2,7 @@ import 'package:credicxo_task/BLoC/ConnectivityBloc.dart';
 import 'package:credicxo_task/models/trendingtracks.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../BLoC/trendingTracsksBloc.dart';
+import '../BLoC/TrendingTracsksBLoC.dart';
 import 'package:credicxo_task/screens/details.dart';
 
 class Home extends StatefulWidget {
@@ -15,17 +15,19 @@ class _HomeState extends State<Home> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    connectivityBloc.statusController.stream.listen((event) {
+    //This check weather device's wifi or mobile data is on or off.
+    connectivityBLoC.statusController.stream.listen((event) {
       if (event) {
-        bloc.fetchTrendingTracks();
+        //This fetches Trending tracks from the api.
+        trendingTracksBloc.fetchTrendingTracks();
       }
     });
-    connectivityBloc.observeConnectivity();
+    connectivityBLoC.observeConnectivity();
   }
 
   @override
   Widget build(BuildContext context) {
-    connectivityBloc.isConnected();
+    connectivityBLoC.isConnected();
     return Scaffold(
       appBar: AppBar(
         elevation: 7,
@@ -46,12 +48,12 @@ class _HomeState extends State<Home> {
         },
       ),
       body: StreamBuilder<bool>(
-          stream: connectivityBloc.statusController.stream,
+          stream: connectivityBLoC.statusController.stream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return snapshot.data
                   ? StreamBuilder<TrendingTracks>(
-                      stream: bloc.allTracks,
+                      stream: trendingTracksBloc.allTracks,
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           return ListView.separated(

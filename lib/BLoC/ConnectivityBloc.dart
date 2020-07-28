@@ -1,13 +1,16 @@
 import 'dart:async';
 import 'package:connectivity/connectivity.dart';
 
-class ConnectivityClass {
-  bool _status;
+// BLoC class for connectivity.
+class ConnectivityBloc {
+  bool _status; //flag for connection status.
 
-  Connectivity _connectivity = Connectivity();
+  Connectivity _connectivity = Connectivity(); // Instance of Connectivity.
 
-  StreamController<bool> statusController = StreamController.broadcast();
+  StreamController<bool> statusController =
+      StreamController.broadcast(); //Stream Controller for connection status.
 
+  //Method for checking whether device is connected to internet or not.
   void isConnected() async {
     ConnectivityResult result = await _connectivity.checkConnectivity();
     if (result == ConnectivityResult.mobile ||
@@ -20,6 +23,7 @@ class ConnectivityClass {
     }
   }
 
+  //Method to observe that internet connection of the device hasn't changed.
   void observeConnectivity() {
     _connectivity.onConnectivityChanged.listen((ConnectivityResult result) {
       if (result == ConnectivityResult.mobile ||
@@ -33,9 +37,11 @@ class ConnectivityClass {
     });
   }
 
+  //Method for disposing the Connectivity BLoC.
   void dispose() {
     statusController.close();
   }
-}
+} // BLoC class ends.
 
-ConnectivityClass connectivityBloc = ConnectivityClass();
+//Global Object for ConnectivityBLoC
+ConnectivityBloc connectivityBLoC = ConnectivityBloc();

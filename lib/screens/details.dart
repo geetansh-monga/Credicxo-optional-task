@@ -1,7 +1,7 @@
-import 'package:credicxo_task/BLoC/trackLyricsBloc.dart';
+import 'package:credicxo_task/BLoC/TrackLyricsBLoC.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:credicxo_task/BLoC/trackDetailsBloc.dart';
+import 'package:credicxo_task/BLoC/TrackDetailsBLoC.dart';
 import 'package:credicxo_task/models/trackLyrics.dart';
 import 'package:credicxo_task/models/trackDetails.dart';
 import 'package:credicxo_task/Widgets/InfoWidget.dart';
@@ -38,19 +38,19 @@ class _InfoPageState extends State<InfoPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    connectivityBloc.statusController.stream.listen((event) {
+    connectivityBLoC.statusController.stream.listen((event) {
       if (event) {
         trackDetailsBloc.fetchTrackDetails(widget.trackId);
         trackLyricsBloc.fetchTrackLyrics(widget.trackId);
       }
     });
-    connectivityBloc.observeConnectivity();
+    connectivityBLoC.observeConnectivity();
     getPrefs();
   }
 
   @override
   Widget build(BuildContext context) {
-    connectivityBloc.isConnected();
+    connectivityBLoC.isConnected();
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
@@ -94,7 +94,7 @@ class _InfoPageState extends State<InfoPage> {
         ),
       ),
       body: StreamBuilder<bool>(
-          stream: connectivityBloc.statusController.stream,
+          stream: connectivityBLoC.statusController.stream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return snapshot.data
