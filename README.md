@@ -7,6 +7,14 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 
 **API used**: Musixmatch Developer API
 
+# Features
+
+* Fetches trending tracks from Musixmatch REST API.
+* Offline Booksmarks which store in device's local storage.
+* Realtime checking of internet connectivity.
+
+
+
 # Screenshots
 
 <p align="center">
