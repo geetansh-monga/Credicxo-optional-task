@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    connectivityBloc.isConnected();
     return Scaffold(
       appBar: AppBar(
         elevation: 7,
