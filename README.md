@@ -10,9 +10,10 @@ Credicxo task number 1 attempted with optional part by **using BLoC pattern.**
 # Screenshots
 
 <p>
+<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/trending.jpg" alt="details" width = "300" height = "500" >
 <img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/details.jpg" alt="details" width = "300" height = "500" >
-<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/details.jpg" alt="feed example" width = "200" height = "300" >
-<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/details.jpg" alt="feed example" width = "200" height = "300" >
+<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/bookmarks.jpg" alt="details" width = "300" height = "500" >
+<img src="https://github.com/GMGOG/Credicxo-optional-task/blob/master/screenshots/no_internet.jpg" alt="details" width = "300" height = "500" >
 </p>
 
 # Applicant Bio
